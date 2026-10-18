@@ -29,7 +29,7 @@ export default function Footer() {
     <footer className="bg-[#0f1e0e] text-white/65">
       {/* Prototype notice */}
       <div className="bg-[#7a3820]/80 border-b border-[#a04f2f]/40">
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-2.5 flex items-center justify-center gap-2.5 text-center flex-wrap">
+        <div className="page-container py-2.5 flex items-center justify-center gap-2.5 text-center flex-wrap">
           <AlertTriangle size={13} className="text-[#f5c06a] flex-shrink-0" />
           <p className="text-[11px] text-white/75">
             <span className="font-bold text-[#f5c06a]">PROTOTYPE ONLY</span>
@@ -38,7 +38,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 pt-14 pb-10">
+      <div className="page-container pt-14 pb-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
 
           {/* Brand column */}

@@ -195,37 +195,37 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#0d1f0b]/70 via-transparent to-transparent" />
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 pt-28 pb-20">
-          <div className="max-w-3xl">
+        <div className="relative z-10 page-container pt-32 sm:pt-36 lg:pt-40 pb-20 sm:pb-24">
+          <div className="max-w-[880px] text-left">
 
             {/* Proto label */}
-            <div className="inline-flex items-center gap-2 mb-7 px-4 py-1.5 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 mb-5 sm:mb-6 px-4 py-1.5 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-[#c9942a] animate-pulse" />
-              <span className="text-white/80 text-[11px] font-medium tracking-widest uppercase">
+              <span className="text-white/85 text-[11px] font-medium tracking-widest uppercase">
                 Province of Bulacan · Prototype Initiative
               </span>
             </div>
 
             {/* Headline */}
-            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.08] mb-7">
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[72px] xl:text-[76px] font-bold text-white tracking-tight leading-[1.08] mb-5 sm:mb-6">
               Preserving Our{' '}
-              <em className="not-italic text-[#c9942a]">Heritage.</em>
-              <br />
+              <span className="text-[#c9942a]">Heritage.</span>
+              <br className="hidden sm:inline" />{' '}
               Sharing Our{' '}
-              <em className="not-italic text-white/90">Culture.</em>
+              <span className="text-white/95">Culture.</span>
             </h1>
 
-            {/* Sub */}
-            <p className="text-white/75 text-lg sm:text-xl leading-relaxed max-w-2xl mb-10 font-light">
+            {/* Description */}
+            <p className="text-white/85 text-[17px] sm:text-[18px] lg:text-[19px] leading-[1.58] max-w-[600px] mb-7 sm:mb-8 font-normal">
               LIKHAYON — <em>Likha Noon, Likha Ngayon</em> — collects reusable materials from Bulacan's festivals and celebrations: bamboo structures, costumes, lanterns, and ritual props, and makes them available to schools, parishes, and community groups for free.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap items-center gap-4">
               <Link
                 to="/materials"
                 id="hero-explore"
-                className="group inline-flex items-center gap-3 px-8 py-4 bg-[#c9942a] text-white font-semibold rounded-full shadow-2xl shadow-[#c9942a]/30 hover:bg-[#d4a843] hover:shadow-[#c9942a]/50 transition-all duration-200 text-[15px]"
+                className="group inline-flex items-center justify-center gap-2.5 px-7 sm:px-8 h-[48px] sm:h-[52px] bg-[#c9942a] text-white font-semibold rounded-full shadow-2xl shadow-[#c9942a]/30 hover:bg-[#d4a843] hover:shadow-[#c9942a]/50 transition-all duration-200 text-sm sm:text-[15px]"
               >
                 Explore the Collection
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -233,25 +233,25 @@ export default function Home() {
               <Link
                 to="/borrow"
                 id="hero-borrow"
-                className="group inline-flex items-center gap-3 px-8 py-4 bg-white/12 text-white font-semibold rounded-full border border-white/30 backdrop-blur-sm hover:bg-white/22 transition-all duration-200 text-[15px]"
+                className="group inline-flex items-center justify-center gap-2.5 px-7 sm:px-8 h-[48px] sm:h-[52px] bg-white/12 text-white font-semibold rounded-full border border-white/30 backdrop-blur-sm hover:bg-white/20 transition-all duration-200 text-sm sm:text-[15px]"
               >
                 Borrow Materials
                 <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </Link>
             </div>
 
-            {/* Inline stats */}
-            <div className="flex flex-wrap gap-8 mt-14 pt-10 border-t border-white/15">
+            {/* Inline stats - evenly spaced columns with ~24-32px spacing above */}
+            <div className="grid grid-cols-3 gap-6 sm:gap-10 max-w-[560px] mt-7 sm:mt-8 pt-6 sm:pt-7 border-t border-white/15">
               {[
                 { val: totalItems, suffix: '+', label: 'Materials in Stock' },
                 { val: archive.length, suffix: '', label: 'Archive Entries' },
                 { val: served, suffix: '', label: 'Communities Served' },
               ].map((s) => (
                 <div key={s.label}>
-                  <p className="font-serif text-3xl font-bold text-white">
+                  <p className="font-serif text-3xl sm:text-4xl font-bold text-white tracking-tight leading-none">
                     <AnimatedCount target={s.val} suffix={s.suffix} />
                   </p>
-                  <p className="text-white/55 text-xs tracking-wide mt-0.5">{s.label}</p>
+                  <p className="text-white/65 text-xs sm:text-[13px] tracking-wide mt-2 leading-snug">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -259,9 +259,9 @@ export default function Home() {
         </div>
 
         {/* Scroll cue */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40 animate-bounce">
+        <div className="hidden sm:flex absolute bottom-6 lg:bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-1.5 text-white/40 animate-bounce pointer-events-none">
           <span className="text-[10px] tracking-widest uppercase">Scroll</span>
-          <ChevronDown size={16} />
+          <ChevronDown size={15} />
         </div>
       </section>
 
@@ -269,7 +269,7 @@ export default function Home() {
           GREEN DIVIDER BAR
       ══════════════════════════════════════════════════ */}
       <div className="bg-[#1e3d1a] py-5">
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div className="page-container">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <p className="text-white/70 text-sm">
               A community initiative of the{' '}
@@ -291,7 +291,7 @@ export default function Home() {
           HOW IT WORKS — 3 STEPS
       ══════════════════════════════════════════════════ */}
       <section className="bg-[#faf7f2] py-24 sm:py-28">
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div className="page-container">
 
           <div className="text-center mb-16">
             <span className="inline-block px-3 py-1 bg-[#edf5eb] text-[#2d5a27] text-[11px] font-semibold tracking-widest uppercase rounded-full mb-4">
@@ -362,7 +362,7 @@ export default function Home() {
           FEATURED CULTURAL MATERIALS
       ══════════════════════════════════════════════════ */}
       <section className="bg-[#f0ebe0] py-24 sm:py-28">
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div className="page-container">
 
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-5 mb-12">
             <div>
@@ -470,7 +470,7 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0d1f0b]/90 via-[#1a2e18]/80 to-[#0d1f0b]/60" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div className="relative z-10 page-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 
             {/* Left copy */}
@@ -478,12 +478,12 @@ export default function Home() {
               <span className="inline-block px-3 py-1 bg-[#c9942a]/20 border border-[#c9942a]/30 text-[#f5c06a] text-[11px] font-semibold tracking-widest uppercase rounded-full mb-6">
                 Digital Museum
               </span>
-              <h2 className="font-serif text-4xl sm:text-5xl font-bold text-white leading-tight mb-6">
+              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight mb-5">
                 Explore Bulacan's
-                <br />
-                <em className="not-italic text-[#c9942a]">Living Heritage</em>
+                <br className="hidden sm:inline" />{' '}
+                <span className="text-[#c9942a]">Living Heritage</span>
               </h2>
-              <p className="text-white/70 text-base leading-relaxed mb-8 max-w-lg">
+              <p className="text-white/75 text-sm sm:text-base leading-relaxed mb-8 max-w-lg">
                 Our digital cultural archive documents the festivals, rituals, crafts, and living traditions that make Bulacan one of the Philippines' richest cultural provinces. Each entry features historical context, photographs, and links to related materials in our bank.
               </p>
               <div className="flex flex-wrap gap-4">
@@ -542,7 +542,7 @@ export default function Home() {
           COMMUNITY IMPACT
       ══════════════════════════════════════════════════ */}
       <section className="bg-[#faf7f2] py-24 sm:py-28">
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div className="page-container">
 
           <div className="text-center mb-16">
             <span className="inline-block px-3 py-1 bg-[#fdf6e8] text-[#c9942a] text-[11px] font-semibold tracking-widest uppercase rounded-full mb-4">

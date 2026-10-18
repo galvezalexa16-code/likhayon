@@ -328,10 +328,10 @@ export default function RequestTracker() {
       {/* ── Header ─────────────────────────────────────── */}
       <div className="bg-[#1a2e18] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?w=1200&q=30')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-14">
+        <div className="relative page-container pt-28 pb-14">
           <p className="text-[#c9942a] text-xs font-semibold tracking-widest uppercase mb-3">Community Portal</p>
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white mb-3">Track Your Request</h1>
-          <p className="text-white/65 max-w-xl text-sm leading-relaxed">
+          <h1 className="font-serif text-3xl sm:text-5xl font-bold text-white mb-3 tracking-tight">Track Your Request</h1>
+          <p className="text-white/75 max-w-xl text-sm sm:text-base leading-relaxed">
             Look up the status of a borrowing request using your reference number and the email address you used when submitting.
           </p>
         </div>
@@ -339,7 +339,7 @@ export default function RequestTracker() {
 
       {/* ── Prototype notice ────────────────────────────── */}
       <div className="bg-amber-50 border-b border-amber-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-start gap-3">
+        <div className="page-container py-3 flex items-start gap-3">
           <AlertTriangle size={14} className="text-amber-600 flex-shrink-0 mt-0.5" />
           <p className="text-amber-800 text-xs leading-snug">
             <strong>Prototype only.</strong> Requests are stored in this browser's localStorage. Only requests submitted in this browser session can be tracked here.
@@ -348,7 +348,7 @@ export default function RequestTracker() {
       </div>
 
       <div className="bg-[#faf7f2] min-h-screen py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-container">
 
           {/* ── Search form ────────────────────────────────── */}
           <div className="max-w-2xl mx-auto mb-10">

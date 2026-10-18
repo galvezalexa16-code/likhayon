@@ -35,8 +35,8 @@ export default function Navbar() {
           : 'bg-[#1a2e18]/97 backdrop-blur-md shadow-xl shadow-black/20'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
-        <div className="flex items-center justify-between h-[68px]">
+      <div className="page-container">
+        <div className="flex items-center justify-between h-[70px]">
 
           {/* ── Logo ── */}
           <Link to="/" id="nav-logo" className="flex items-center gap-3 group flex-shrink-0">
@@ -47,24 +47,24 @@ export default function Navbar() {
               <span className="font-serif font-bold text-white text-[16px] tracking-widest uppercase">
                 LIKHAYON
               </span>
-              <span className="block text-[#c9942a] text-[9px] tracking-[0.12em] uppercase font-medium mt-0.5">
+              <span className="block text-[#c9942a] text-[9.5px] tracking-[0.12em] uppercase font-medium mt-1">
                 Likha Noon, Likha Ngayon
               </span>
             </div>
           </Link>
 
           {/* ── Desktop links ── */}
-          <div className="hidden md:flex items-center gap-0.5">
+          <div className="hidden md:flex items-center gap-1 lg:gap-2">
             {navLinks.map(link => (
               <NavLink
                 key={link.to}
                 to={link.to}
                 end={link.end}
                 className={({ isActive }) =>
-                  `relative px-4 py-2 text-[13.5px] font-medium tracking-wide transition-colors duration-200 rounded-lg ${
+                  `relative px-3.5 py-2 text-[14px] font-medium tracking-wide transition-colors duration-200 rounded-lg ${
                     isActive
                       ? 'text-[#c9942a]'
-                      : 'text-white/75 hover:text-white'
+                      : 'text-white/80 hover:text-white'
                   }`
                 }
               >
@@ -78,7 +78,7 @@ export default function Navbar() {
             <Link
               to="/borrow"
               id="nav-borrow-cta"
-              className="hidden md:inline-flex items-center gap-2 px-5 py-2 bg-[#c9942a] text-white text-[13px] font-semibold rounded-full shadow-lg shadow-[#c9942a]/25 hover:bg-[#d4a843] hover:shadow-[#c9942a]/40 transition-all duration-200"
+              className="hidden md:inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-[#c9942a] text-white text-[13.5px] font-semibold rounded-full shadow-lg shadow-[#c9942a]/25 hover:bg-[#d4a843] hover:shadow-[#c9942a]/40 transition-all duration-200"
             >
               Borrow Materials
             </Link>

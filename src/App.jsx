@@ -15,9 +15,9 @@ export default function App() {
   const isAdmin = location.pathname.startsWith('/admin');
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#faf7f2]">
+    <div className="w-full min-h-screen flex flex-col bg-[#faf7f2] overflow-x-hidden">
       <Navbar />
-      <main className="flex-1">
+      <main className="flex-1 w-full">
         <Routes>
           <Route path="/"          element={<Home />} />
           <Route path="/museum"    element={<Museum />} />

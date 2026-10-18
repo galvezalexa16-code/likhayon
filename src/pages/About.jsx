@@ -38,12 +38,12 @@ export default function About() {
         <div className="absolute inset-0 opacity-10"
           style={{ backgroundImage: `url('https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?w=1200&q=40')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
         />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+        <div className="relative page-container text-white">
           <p className="text-[#c9942a] text-xs font-semibold tracking-widest uppercase mb-3">The Initiative</p>
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold mb-4 max-w-2xl leading-tight">
+          <h1 className="font-serif text-3xl sm:text-5xl font-bold mb-4 max-w-2xl leading-tight tracking-tight">
             About LIKHAYON
           </h1>
-          <p className="text-white/75 max-w-2xl text-sm sm:text-base leading-relaxed mb-6">
+          <p className="text-white/80 max-w-2xl text-sm sm:text-base leading-relaxed mb-6">
             LIKHAYON is a proposed community innovation initiative submitted under the Provincial Innovation Program. This website serves as the interactive prototype of the digital platform component.
           </p>
           <div className="inline-block px-3.5 py-1.5 bg-[#c9942a]/20 border border-[#c9942a]/40 rounded-full text-[#f5c06a] text-xs font-medium">
@@ -53,7 +53,7 @@ export default function About() {
       </div>
 
       {/* Mission & Vision */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <section className="page-container py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-[#1e3d1a] rounded-2xl p-8 text-white">
             <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mb-5">
@@ -78,12 +78,12 @@ export default function About() {
 
       {/* Problem Statement */}
       <section className="bg-[#f0ebe0] py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-[#c9942a] text-xs font-semibold tracking-widest uppercase mb-3">The Problem We Solve</p>
-              <h2 className="font-serif text-3xl font-bold text-[#1a1a18] mb-6">After Every Festival, Heritage Is Lost</h2>
-              <div className="space-y-4 text-[#6b6b5e] text-sm leading-relaxed">
+              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#1a1a18] mb-5 tracking-tight">After Every Festival, Heritage Is Lost</h2>
+              <div className="space-y-4 text-[#6b6b5e] text-sm sm:text-base leading-relaxed">
                 <p>
                   In Bulacan alone, hundreds of festivals are celebrated annually across its 24 municipalities. Each celebration involves significant investment in bamboo structures, costumes, banners, lanterns, and props — many of which are discarded or abandoned after the event ends.
                 </p>
@@ -113,10 +113,10 @@ export default function About() {
       </section>
 
       {/* Objectives */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <section className="page-container py-16">
         <div className="text-center mb-12">
           <p className="text-[#c9942a] text-xs font-semibold tracking-widest uppercase mb-3">Goals</p>
-          <h2 className="font-serif text-3xl font-bold text-[#1a1a18]">LIKHAYON Program Objectives</h2>
+          <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#1a1a18] tracking-tight">LIKHAYON Program Objectives</h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {OBJECTIVES.map((obj, i) => (
@@ -133,10 +133,10 @@ export default function About() {
 
       {/* Team */}
       <section className="bg-[#f0ebe0] py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="page-container">
           <div className="text-center mb-12">
             <p className="text-[#c9942a] text-xs font-semibold tracking-widest uppercase mb-3">The People</p>
-            <h2 className="font-serif text-3xl font-bold text-[#1a1a18]">Core Team (Sample)</h2>
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#1a1a18] tracking-tight">Core Team (Sample)</h2>
             <p className="text-[#6b6b5e] text-sm mt-2">Fictional sample team for the LIKHAYON prototype demonstration.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -158,7 +158,7 @@ export default function About() {
       </section>
 
       {/* Partners */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <section className="page-container py-16">
         <div className="text-center mb-10">
           <p className="text-[#c9942a] text-xs font-semibold tracking-widest uppercase mb-3">Collaboration</p>
           <h2 className="font-serif text-3xl font-bold text-[#1a1a18]">Partner Agencies</h2>

@@ -365,10 +365,10 @@ export default function BorrowingRequest() {
       {/* ── Page Header ─────────────────────────────────── */}
       <div className="bg-[#1a2e18] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1490750967868-88df5691cc90?w=1200&q=30')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-14 text-white">
+        <div className="relative page-container pt-28 pb-14 text-white">
           <p className="text-[#c9942a] text-xs font-semibold tracking-widest uppercase mb-3">Community Access</p>
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold mb-3">Borrowing Request</h1>
-          <p className="text-white/65 max-w-xl text-sm leading-relaxed">
+          <h1 className="font-serif text-3xl sm:text-5xl font-bold mb-3 tracking-tight">Borrowing Request</h1>
+          <p className="text-white/75 max-w-xl text-sm sm:text-base leading-relaxed">
             Request to borrow cultural materials from LIKHAYON for your festival, school event, or community celebration. All requests are reviewed within 2–3 business days.
           </p>
         </div>
@@ -376,7 +376,7 @@ export default function BorrowingRequest() {
 
       {/* ── Prototype notice ────────────────────────────── */}
       <div className="bg-amber-50 border-b border-amber-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center gap-3">
+        <div className="page-container py-3 flex items-center gap-3">
           <AlertTriangle size={14} className="text-amber-600 flex-shrink-0" />
           <p className="text-amber-800 text-xs leading-snug">
             <strong>Front-end prototype:</strong> Submitting this form will store a simulated request in your browser's localStorage. No email is sent and no real request is received.
@@ -388,7 +388,7 @@ export default function BorrowingRequest() {
       </div>
 
       {/* ── Body ────────────────────────────────────────── */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div className="page-container py-10">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
           {/* ── FORM ────────────────────────────────────── */}

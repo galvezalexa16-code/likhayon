@@ -546,23 +546,24 @@ export default function Museum() {
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-[#0f1e0e]/60 via-[#0f1e0e]/80 to-[#0f1e0e]" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 pt-28 pb-16 text-center">
-          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#c9942a]/30 bg-[#c9942a]/10 text-[#f5c06a] text-[11px] font-medium tracking-widest uppercase mb-7">
+        <div className="relative z-10 page-container pt-28 pb-16 text-center">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#c9942a]/30 bg-[#c9942a]/10 text-[#f5c06a] text-[11px] font-medium tracking-widest uppercase mb-5 sm:mb-6">
             <Sparkles size={11} />
             Digital Museum &amp; Cultural Archive
           </span>
 
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 max-w-4xl mx-auto">
-            Discover the Stories<br />
-            <em className="not-italic text-[#c9942a]">Behind Our Heritage</em>
+          <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.15] mb-5 sm:mb-6 max-w-4xl mx-auto">
+            Discover the Stories
+            <br className="hidden sm:inline" />{' '}
+            <span className="text-[#c9942a]">Behind Our Heritage</span>
           </h1>
 
-          <p className="text-white/65 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-10">
+          <p className="text-white/75 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto leading-relaxed mb-8 sm:mb-10">
             An online cultural exhibition of tangible objects from Bulacan's festivals and living traditions — documented, preserved, and made available for communities to borrow, celebrate with, and learn from.
           </p>
 
           {/* Search bar */}
-          <div className="relative max-w-xl mx-auto mb-8">
+          <div className="relative max-w-xl mx-auto mb-6 sm:mb-8">
             <Search size={18} className="absolute left-5 top-1/2 -translate-y-1/2 text-[#9e9e8f]" />
             <input
               id="museum-search-main"
@@ -571,7 +572,7 @@ export default function Museum() {
               placeholder="Search by material, festival, community, or tag…"
               value={search}
               onChange={e => setSearch(e.target.value)}
-              className="w-full pl-12 pr-12 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl text-white placeholder:text-white/40 text-sm focus:outline-none focus:border-[#c9942a]/50 focus:bg-white/15 transition-all"
+              className="w-full pl-12 pr-12 py-3.5 sm:py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl text-white placeholder:text-white/40 text-sm focus:outline-none focus:border-[#c9942a]/50 focus:bg-white/15 transition-all"
             />
             {search && (
               <button
@@ -585,7 +586,7 @@ export default function Museum() {
           </div>
 
           {/* Quick stats */}
-          <div className="flex flex-wrap justify-center gap-8 text-sm">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs sm:text-sm">
             <span className="text-white/50">{archive.length} archive entries</span>
             <span className="text-white/30">·</span>
             <span className="text-white/50">{MUSEUM_CATEGORIES.length - 1} categories</span>
@@ -606,7 +607,7 @@ export default function Museum() {
           FILTERS + GALLERY
       ══════════════════════════════════════════════════ */}
       <div className="bg-[#faf7f2]">
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-12">
+        <div className="page-container py-12">
 
           {/* Category filter bar */}
           <div className="mb-10">

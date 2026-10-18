@@ -535,36 +535,37 @@ export default function MaterialsBank() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#1a2e18] via-[#1a2e18]/90 to-[#1a2e18]/70" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 pt-28 pb-14">
+        <div className="relative z-10 page-container pt-28 pb-14">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-end">
             <div>
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#c9942a]/30 bg-[#c9942a]/10 text-[#f5c06a] text-[11px] font-medium tracking-widest uppercase mb-6">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#c9942a]/30 bg-[#c9942a]/10 text-[#f5c06a] text-[11px] font-medium tracking-widest uppercase mb-4 sm:mb-5">
                 <Package size={11} /> Materials Bank
               </span>
-              <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white mb-4 leading-tight">
-                Community Materials<br />
-                <em className="not-italic text-[#c9942a]">Catalog</em>
+              <h1 className="font-serif text-3xl sm:text-5xl font-bold text-white mb-3 sm:mb-4 leading-tight tracking-tight">
+                Community Materials
+                <br className="hidden sm:inline" />{' '}
+                <span className="text-[#c9942a]">Catalog</span>
               </h1>
-              <p className="text-white/65 text-sm leading-relaxed max-w-md mb-5">
+              <p className="text-white/75 text-sm sm:text-base leading-relaxed max-w-lg mb-5">
                 A searchable catalog of reusable cultural materials collected from festivals and community events across Bulacan. Available to schools, parishes, and community organizations for free.
               </p>
               {/* Proposed notice */}
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/20 bg-white/8 text-white/60 text-[11px]">
-                <AlertTriangle size={11} className="text-amber-400" />
-                Proposed collection — materials not yet physically in stock
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/20 bg-white/10 text-white/70 text-xs">
+                <AlertTriangle size={12} className="text-amber-400 flex-shrink-0" />
+                <span>Proposed collection — materials not yet physically in stock</span>
               </div>
             </div>
 
             {/* Stats cards */}
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-3 gap-3 sm:gap-4">
               {[
                 { value: materials.length, label: 'Material Types', color: '#c9942a' },
                 { value: totalAvail, label: 'Units Available', color: '#4ade80' },
                 { value: onLoan, label: 'Currently On Loan', color: '#f87171' },
               ].map(s => (
-                <div key={s.label} className="bg-white/8 border border-white/10 rounded-xl p-4 text-center">
-                  <p className="font-serif text-2xl font-bold" style={{ color: s.color }}>{s.value}</p>
-                  <p className="text-white/50 text-[10px] mt-1 leading-tight">{s.label}</p>
+                <div key={s.label} className="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-3.5 sm:p-5 text-center flex flex-col justify-center">
+                  <p className="font-serif text-2xl sm:text-3xl font-bold tracking-tight leading-none mb-1.5" style={{ color: s.color }}>{s.value}</p>
+                  <p className="text-white/70 text-[11px] sm:text-xs leading-snug">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -596,7 +597,7 @@ export default function MaterialsBank() {
       <div className="bg-[#faf7f2] min-h-screen">
         {/* Sticky filter bar */}
         <div className="bg-white border-b border-gray-200 sticky top-[68px] z-20">
-          <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-3 flex flex-wrap gap-3 items-center">
+          <div className="page-container py-3 flex flex-wrap gap-3 items-center">
 
             {/* Category pills */}
             <div className="flex flex-wrap gap-1.5 flex-1">
@@ -664,7 +665,7 @@ export default function MaterialsBank() {
           {/* Expanded filter panel */}
           {showFilters && (
             <div className="border-t border-gray-100 bg-[#faf7f2]">
-              <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-4">
+              <div className="page-container py-4">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
 
                   {/* All categories */}
@@ -735,7 +736,7 @@ export default function MaterialsBank() {
         </div>
 
         {/* Catalog body */}
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-8">
+        <div className="page-container py-8">
 
           {/* Results header */}
           <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
