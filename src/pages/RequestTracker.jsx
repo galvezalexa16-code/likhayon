@@ -170,7 +170,7 @@ function RequestResult({ req, material }) {
                 src={material.imageUrl}
                 alt={material.name}
                 className="w-12 h-12 rounded-lg object-cover flex-shrink-0"
-                onError={e => { e.target.src = 'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=80&q=60'; }}
+                onError={e => { e.target.src = '/images/materials/kawayan-arch.jpg'; }}
               />
               <div>
                 <p className="text-sm font-serif font-bold text-[#1a1a18]">{material.name}</p>

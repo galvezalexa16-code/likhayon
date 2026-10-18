@@ -28,7 +28,29 @@ const MAX_LOG_ENTRIES = 200;
 function loadOrDefault(key, fallback) {
   try {
     const raw = localStorage.getItem(key);
-    return raw ? JSON.parse(raw) : fallback;
+    if (!raw) return fallback;
+    const parsed = JSON.parse(raw);
+    if (key === LS_MATERIALS && Array.isArray(parsed) && Array.isArray(fallback)) {
+      const fallbackMap = new Map(fallback.map(m => [m.id, m.imageUrl]));
+      return parsed.map(m => {
+        const freshImg = fallbackMap.get(m.id);
+        if (freshImg && m.imageUrl !== freshImg) {
+          return { ...m, imageUrl: freshImg };
+        }
+        return m;
+      });
+    }
+    if (key === LS_ARCHIVE && Array.isArray(parsed) && Array.isArray(fallback)) {
+      const fallbackMap = new Map(fallback.map(a => [a.id, { img: a.imageUrl, gallery: a.gallery }]));
+      return parsed.map(a => {
+        const fresh = fallbackMap.get(a.id);
+        if (fresh) {
+          return { ...a, imageUrl: fresh.img, gallery: fresh.gallery || [] };
+        }
+        return a;
+      });
+    }
+    return parsed;
   } catch {
     return fallback;
   }

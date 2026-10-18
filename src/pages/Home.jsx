@@ -86,28 +86,28 @@ const ARCHIVE_PREVIEWS = [
     title: 'Sayaw sa Obando',
     municipality: 'Obando',
     category: 'Festival',
-    img: 'https://images.unsplash.com/photo-1534430480872-3498386e7856?w=700&q=80',
+    img: '/images/materials/obando-dancers.jpg',
   },
   {
     id: 'arc-003',
     title: 'Pulilan Carabao Festival',
     municipality: 'Pulilan',
     category: 'Ritual',
-    img: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=700&q=80',
+    img: '/images/materials/carabao-festival.jpg',
   },
   {
     id: 'arc-006',
     title: 'Bulacan Parol Festival',
     municipality: 'Province-wide',
     category: 'Festival',
-    img: 'https://images.unsplash.com/photo-1543332164-6e82f355badc?w=700&q=80',
+    img: '/images/materials/parol-star-lanterns.jpg',
   },
   {
     id: 'arc-002',
     title: 'Bocaue River Festival',
     municipality: 'Bocaue',
     category: 'Festival',
-    img: 'https://images.unsplash.com/photo-1472745942893-4b9f730c7668?w=700&q=80',
+    img: '/images/materials/bocaue-pagoda.jpg',
   },
 ];
 
@@ -401,8 +401,7 @@ export default function Home() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-600"
                     loading={i < 3 ? 'eager' : 'lazy'}
                     onError={e => {
-                      e.target.src =
-                        'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=600&q=60';
+                      e.target.src = '/images/materials/kawayan-arch.jpg';
                     }}
                   />
                   {/* Category label */}

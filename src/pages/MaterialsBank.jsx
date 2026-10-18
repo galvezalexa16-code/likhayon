@@ -84,7 +84,7 @@ function MaterialCard({ mat, onView, onBorrow, index }) {
           alt={mat.name}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-600"
           loading={index < 6 ? 'eager' : 'lazy'}
-          onError={e => { e.target.src = 'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=600&q=60'; }}
+          onError={e => { e.target.src = '/images/materials/kawayan-arch.jpg'; }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
 
@@ -190,7 +190,7 @@ function MaterialRow({ mat, onView, onBorrow }) {
         alt={mat.name}
         className="w-16 h-16 rounded-xl object-cover flex-shrink-0 bg-[#e8e0d4]"
         loading="lazy"
-        onError={e => { e.target.src = 'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=100&q=60'; }}
+        onError={e => { e.target.src = '/images/materials/kawayan-arch.jpg'; }}
       />
       <div className="flex-1 min-w-0">
         <div className="flex items-start gap-2 flex-wrap mb-1">
@@ -240,7 +240,7 @@ function MaterialDetail({ mat, archiveEntry, onBorrow }) {
           src={mat.imageUrl}
           alt={mat.name}
           className="w-full h-full object-cover"
-          onError={e => { e.target.src = 'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=800&q=60'; }}
+          onError={e => { e.target.src = '/images/materials/kawayan-arch.jpg'; }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
         <div className="absolute bottom-4 left-5 right-5">

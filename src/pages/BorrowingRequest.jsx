@@ -464,7 +464,7 @@ export default function BorrowingRequest() {
                           src={selectedMaterial.imageUrl}
                           alt={selectedMaterial.name}
                           className="w-18 h-16 w-16 object-cover rounded-lg flex-shrink-0 bg-[#e0d8cc]"
-                          onError={e => { e.target.src = 'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=100&q=60'; }}
+                          onError={e => { e.target.src = '/images/materials/kawayan-arch.jpg'; }}
                         />
                         <div className="flex-1 min-w-0">
                           <p className="font-serif font-bold text-[#1a1a18] text-sm leading-snug">{selectedMaterial.name}</p>

@@ -19,7 +19,7 @@ export default function MaterialCard({ material, onClick }) {
           alt={material.name}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           loading="lazy"
-          onError={(e) => { e.target.src = `https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=600&q=60`; }}
+          onError={(e) => { e.target.src = '/images/materials/kawayan-arch.jpg'; }}
         />
         {/* Category badge */}
         <span className="absolute top-3 left-3 px-2 py-0.5 bg-[#1e3d1a]/80 text-white text-[10px] font-medium rounded uppercase tracking-wider backdrop-blur-sm">

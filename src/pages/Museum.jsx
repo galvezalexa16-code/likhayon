@@ -85,7 +85,7 @@ function ArchiveCard({ entry, onClick, index }) {
           alt={entry.title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
           loading="lazy"
-          onError={e => { e.target.src = 'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=600&q=60'; }}
+          onError={e => { e.target.src = '/images/materials/kawayan-arch.jpg'; }}
         />
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
@@ -267,7 +267,7 @@ function EntryDetail({ entry, linkedMaterial }) {
               src={linkedMaterial.imageUrl}
               alt={linkedMaterial.name}
               className="w-14 h-14 rounded-xl object-cover flex-shrink-0"
-              onError={e => { e.target.src = 'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=100&q=60'; }}
+              onError={e => { e.target.src = '/images/materials/kawayan-arch.jpg'; }}
             />
             <div className="flex-1 min-w-0">
               <p className="font-semibold text-[#1a1a18] text-sm">{linkedMaterial.name}</p>

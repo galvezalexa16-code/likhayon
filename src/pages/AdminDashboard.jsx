@@ -686,7 +686,7 @@ function Inventory({ materials, onAdd, onEdit, onDelete }) {
                   <tr key={mat.id} className="hover:bg-[#faf7f2] transition-colors group">
                     <td className="pl-4 py-3 w-12">
                       <img src={mat.imageUrl} alt="" className="w-10 h-10 rounded-xl object-cover bg-[#e8e0d4]"
-                        onError={e => { e.target.src = 'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=60&q=40'; }} />
+                        onError={e => { e.target.src = '/images/materials/kawayan-arch.jpg'; }} />
                     </td>
                     <td className="px-4 py-3">
                       <p className="font-serif font-semibold text-[#1a1a18] text-sm leading-snug">{mat.name}</p>
